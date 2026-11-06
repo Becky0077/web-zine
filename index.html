@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400..700&family=Gravitas+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&family=Viga&display=swap" rel="stylesheet">
+  <title>What's in the bag?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="#start">WHAT'S IN THE BAG?</a>
+    <span>SECURITY CHECK</span>
+  </header>
+
+
+  <section id="start">
+    <div class="frame big">
+      <span class="tl"></span><span class="tr"></span>
+      <span class="bl"></span><span class="br"></span>
+      <h1>WHAT'S<br>IN THE<br>BAG?</h1>
+    </div>
+    <a class="button" href="#choose">START SCAN</a>
+    <p class="small">no liquids over 100ml! </p>
+  </section>
+
+
+  <section id="choose">
+    <h2>Which bag goes through?</h2>
+   
+    <div class="cards">
+       <img class="side-photo" src="images/scanner.png">
+      <a class="card" href="#scan-white">
+        <div class="photo"><img src="images/bag-white.png"></div>
+        <p>white bag</p>
+      </a>
+      <a class="card" href="#scan-peach">
+        <div class="photo"><img src="images/bag-peach.png"></div>
+        <p>peach bag</p>
+      </a>
+    </div>
+    <div class="belt"></div>
+  </section>
+
+  <section id="scan-white">
+<button onclick="document.getElementById('beep').play()">
+    Start Scanning
+</button>
+    <a class="full" href="#xray-white">
+      <div class="frame">
+        <span class="tl"></span><span class="tr"></span>
+        <span class="bl"></span><span class="br"></span>
+        <img src="images/bag-white.png" alt="">
+      </div>
+      <p class="scanning">SCANNING...</p>
+      <p class="small">tap anywhere to continue</p>
+    </a>
+  </section>
+
+  <section id="scan-peach">
+<button onclick="document.getElementById('beep').play()">
+    Start Scanning
+</button>
+    <a class="full" href="#xray-peach">
+      <div class="frame">
+        <span class="tl"></span><span class="tr"></span>
+        <span class="bl"></span><span class="br"></span>
+        <img src="images/bag-peach.png" alt="">
+      </div>
+      <p class="scanning">SCANNING...</p>
+      <p class="small">tap anywhere to continue</p>
+    </a>
+  </section>
+
+
+  <section id="xray-white">
+    <h2>Scan complete!</h2>
+    <p class="small">tap the bag to open it</p>
+    <a class="xray" href="#items-white"><img src="images/xray-white.png"></a>
+  </section>
+
+  <section id="xray-peach">
+    <h2>Scan complete!</h2>
+    <p class="small">tap the bag to open it</p>
+    <a class="xray" href="#items-peach"><img src="images/xray-peach.png"></a>
+  </section>
+
+
+  <section id="items-white">
+    <h2>Inside the white bag</h2>
+    <p class="small">9 items found</p>
+    <div class="grid">
+      <figure><img src="images/card-holder.png"><figcaption>Card holder</figcaption></figure>
+      <figure><img src="images/earbuds.png"><figcaption>Earbuds</figcaption></figure>
+      <figure><img src="images/face-mask.png"><figcaption>Face mask</figcaption></figure>
+      <figure><img src="images/hand-cream.png"><figcaption>Hand cream</figcaption></figure>
+      <figure><img src="images/laptop.png"><figcaption>Laptop</figcaption></figure>
+      <figure><img src="images/lip-tint.png"><figcaption>Lip tint</figcaption></figure>
+      <figure><img src="images/phone.png"><figcaption>Phone</figcaption></figure>
+      <figure><img src="images/rhode.png"><figcaption>Lip treatment</figcaption></figure>
+      <figure><img src="images/santal.png"><figcaption>Santal 33</figcaption></figure>
+    </div>
+    <a class="button" href="#choose">SCAN ANOTHER BAG</a>
+  </section>
+
+  <section id="items-peach">
+    <h2>Inside the peach bag</h2>
+    <p class="small">7 items found</p>
+    <div class="grid">
+      <figure><img src="images/laptop-pink.png"><figcaption>Laptop</figcaption></figure>
+      <figure><img src="images/perfume-bow.png"><figcaption>Miss Dior perfume</figcaption></figure>
+      <figure><img src="images/powder.png"><figcaption>Dior powder</figcaption></figure>
+      <figure><img src="images/airpods.png"><figcaption>AirPods case</figcaption></figure>
+      <figure><img src="images/cherry-comb.png"><figcaption>Cherry comb</figcaption></figure>
+      <figure><img src="images/lipstick.png"><figcaption>Lipstick</figcaption></figure>
+      <figure><img src="images/mini-wallet.png"><figcaption>Mini wallet</figcaption></figure>
+    </div>
+    <a class="button" href="#choose">SCAN ANOTHER BAG</a>
+  </section>
+  <audio id="beep" src="beep.mp3"></audio>
+</body>
+</html>
